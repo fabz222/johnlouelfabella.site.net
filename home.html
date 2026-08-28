@@ -1,0 +1,1033 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="John Louel Jay B. Fabella - Data Entry Specialist and BSIT Graduate Portfolio">
+    <meta name="author" content="John Louel Jay Fabella">
+    <title>John Louel Jay B. Fabella | Data Entry Portfolio</title>
+    
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #0b3d91;
+            --secondary: #1769d1;
+            --dark: #102033;
+            --text: #4b5b6b;
+            --light: #f5f8fc;
+            --white: #ffffff;
+            --border: #e1e8f0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.97);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        nav {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--dark);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f5f9ff 0%, #ffffff 65%);
+            padding-top: 75px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e8f1ff;
+            color: var(--primary);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 68px);
+            line-height: 1.08;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #082f70;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(11,61,145,0.12);
+            text-align: center;
+        }
+
+        .profile-circle {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0b3d91, #1769d1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 55px;
+            font-weight: 800;
+        }
+
+        .profile-card h3 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        /* GENERAL */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            color: var(--dark);
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--dark);
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            display: grid;
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 20px;
+            background: var(--light);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        /* SERVICES */
+        .services {
+            background: var(--light);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #e8f1ff;
+            color: var(--primary);
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .skill {
+            margin-bottom: 22px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .progress {
+            height: 10px;
+            background: #e8edf3;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 10px;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+        }
+
+        .skill-list div {
+            padding: 15px;
+            background: var(--light);
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: var(--light);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .project-image {
+            height: 160px;
+            background: linear-gradient(135deg, #0b3d91, #1769d1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 45px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        /* WHY HIRE */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        .why-card .number {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #e8f1ff;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+        }
+
+        .why-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: var(--dark);
+            color: #d9e4f1;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .contact-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .contact-item strong {
+            color: white;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 7px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #091521;
+            color: #9eafc0;
+            text-align: center;
+            padding: 25px 10px;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-content,
+            .about-grid,
+            .skills-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid,
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding: 110px 0 70px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                gap: 15px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .service-grid,
+            .project-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-list {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <img src="logo.jpg"  width="100" height="73">
+
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div>
+                <span class="badge">AVAILABLE FOR FREELANCE WORK</span>
+
+                <h1>
+                    Hi, I'm <span>John</span>
+                </h1>
+
+                <p>
+                    A detail-oriented BSIT graduate specializing in
+                    <strong>Data Entry, Microsoft Office, document organization,
+                    and administrative support.</strong>
+                </p>
+
+                <div class="buttons">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#projects" class="btn btn-outline">View My Work</a>
+                </div>
+            </div>
+
+            <div class="profile-card">
+                <img src="profile2.png" width="295" height="300">
+                
+                <br>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Professional, organized, and committed to delivering accurate work.</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+                <h3>Focused on Accuracy and Quality</h3>
+
+                <p>
+                    I am a Bachelor of Science in Information Technology graduate
+                    with a strong interest in data entry, administrative support,
+                    and online freelance work.
+                </p>
+
+                <p>
+                    I can work with spreadsheets, documents, databases, and
+                    digital files while maintaining accuracy, organization,
+                    and confidentiality.
+                </p>
+
+                <p>
+                    My goal is to provide reliable support to businesses,
+                    professionals, and clients who need assistance with
+                    repetitive data and administrative tasks.
+                </p>
+            </div>
+
+            <div class="info-box">
+
+                <div class="info-item">
+                    <strong>Education</strong>
+                    Bachelor of Science in Information Technology
+                </div>
+
+                <div class="info-item">
+                    <strong>Specialization</strong>
+                    Data Entry & Administrative Support
+                </div>
+
+                <div class="info-item">
+                    <strong>Work Style</strong>
+                    Organized, detail-oriented, and deadline-conscious
+                </div>
+
+                <div class="info-item">
+                    <strong>Availability</strong>
+                    Freelance / Remote Work
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>My Services</h2>
+            <p>Reliable assistance for your everyday data and administrative tasks.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <div class="service-icon">⌨</div>
+                <h3>Data Entry</h3>
+                <p>
+                    Accurate encoding of information into spreadsheets,
+                    databases, forms, and other systems.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Excel & Spreadsheets</h3>
+                <p>
+                    Data organization, formatting, sorting, filtering,
+                    basic formulas, and spreadsheet cleanup.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>PDF to Word / Excel</h3>
+                <p>
+                    Converting information from PDF files into editable
+                    Word documents or Excel spreadsheets.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔎</div>
+                <h3>Web Research</h3>
+                <p>
+                    Collecting and organizing information from reliable
+                    online sources based on client requirements.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📁</div>
+                <h3>File Organization</h3>
+                <p>
+                    Organizing digital documents, folders, filenames,
+                    and records for easier access.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Document Formatting</h3>
+                <p>
+                    Formatting Word documents, reports, lists,
+                    tables, and other professional files.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Skills</h2>
+            <p>Technical and professional skills that I can bring to your project.</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>Data Entry</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>Microsoft Excel</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>Microsoft Word</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:95%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span>Google Sheets</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width:90%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="skill-list">
+
+                <div>✓ Typing & Encoding</div>
+                <div>✓ Data Cleaning</div>
+                <div>✓ Copy & Paste Tasks</div>
+                <div>✓ File Management</div>
+                <div>✓ Web Research</div>
+                <div>✓ Document Formatting</div>
+                <div>✓ Basic Computer Skills</div>
+                <div>✓ Administrative Support</div>
+                <div>✓ Attention to Detail</div>
+                <div>✓ Time Management</div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Sample Projects</h2>
+            <p>Examples of the type of work I can handle.</p>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3>Spreadsheet Data Entry</h3>
+                    <p>
+                        Organized sample records into a structured
+                        spreadsheet with proper formatting and sorting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">📄</div>
+                <div class="project-content">
+                    <h3>Document Conversion</h3>
+                    <p>
+                        Transferred information from PDF documents
+                        into editable Word and Excel formats.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">🔎</div>
+                <div class="project-content">
+                    <h3>Online Research</h3>
+                    <p>
+                        Collected information from websites and organized
+                        the results into a clear spreadsheet.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section>
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Why Hire Me?</h2>
+            <p>What you can expect when working with me.</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <div class="number">01</div>
+                <h3>Accurate</h3>
+                <p>I carefully check information to reduce errors.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="number">02</div>
+                <h3>Reliable</h3>
+                <p>I take deadlines and assigned tasks seriously.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="number">03</div>
+                <h3>Organized</h3>
+                <p>I keep files and data structured and easy to manage.</p>
+            </div>
+
+            <div class="why-card">
+                <div class="number">04</div>
+                <h3>Fast Learner</h3>
+                <p>I can quickly learn new tools and work processes.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Let's Work Together</h2>
+            <p>
+                Have a data entry or administrative task?
+                Send me a message and let's discuss your project.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>Contact Information</h3>
+
+                <div class="contact-item">
+                    <strong>Name</strong>
+                    John Louel Jay B. Fabella
+                </div>
+
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    johnloueljayfabella@gmail.com
+                </div>
+
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    Philippines
+                </div>
+
+                <div class="contact-item">
+                    <strong>Portfolio</strong>
+                    johnlouelfabella.site.net
+                </div>
+
+            </div>
+
+            <form class="contact-form" onsubmit="sendMessage(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Tell me about your project..."
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © <span id="year"></span>
+        <strong>John Louel Jay Fabella</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Data Entry Specialist | BSIT Graduate
+    </p>
+</footer>
+
+<script>
+
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            document.getElementById("navLinks").classList.remove("active");
+        });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function sendMessage(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        const recipient = "YOUR_EMAIL@example.com";
+
+        const body =
+            "Name: " + name + "%0D%0A" +
+            "Email: " + email + "%0D%0A%0D%0A" +
+            message;
+
+        window.location.href =
+            "mailto:" + recipient +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + body;
+    }
+
+</script>
+
+</body>
+</html>
+```
